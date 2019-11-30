@@ -32,4 +32,5 @@ public class Person implements Serializable {
 	int id;
 	String name;
 	LocalDate birthDate;
+	int age;
 }

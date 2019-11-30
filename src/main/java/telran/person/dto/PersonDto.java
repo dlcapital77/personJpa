@@ -13,4 +13,5 @@ public class PersonDto {
 	int id;
 	String name;
 	String birthDate;
+	int age;
 }

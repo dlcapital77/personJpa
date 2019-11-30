@@ -32,7 +32,7 @@ public class PersonServiceImpl implements PersonService {
 
 	private Person convertToPerson(PersonDto personDto) {
 		return Person.builder().id(personDto.getId()).name(personDto.getName())
-				.birthDate(LocalDate.parse(personDto.getBirthDate())).build();
+				.birthDate(LocalDate.parse(personDto.getBirthDate())).age(personDto.getAge()).build();
 	}
 
 	@Override
@@ -46,6 +46,7 @@ public class PersonServiceImpl implements PersonService {
 
 	private PersonDto convertToPersonDto(Person person) {
 		return PersonDto.builder().name(person.getName()).id(person.getId()).birthDate(person.getBirthDate().toString())
+				.age(person.getAge())
 				.build();
 	}
 
